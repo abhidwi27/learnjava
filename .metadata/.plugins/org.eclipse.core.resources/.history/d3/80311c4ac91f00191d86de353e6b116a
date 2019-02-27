@@ -1,0 +1,21 @@
+package child;
+
+import java.io.IOException;
+
+import parent.Parent;
+
+public class Child extends Parent{
+	
+	
+	@Override
+	public Integer getChar(Number n){
+		int i = this.c;
+		return i;
+	}
+	
+	public String getChar(String c){
+		int i = this.c;
+		return "i";
+	}
+
+}

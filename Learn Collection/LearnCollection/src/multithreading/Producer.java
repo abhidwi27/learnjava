@@ -1,0 +1,42 @@
+package multithreading;
+
+import java.util.Queue;
+
+public class Producer implements Runnable {
+	
+	private Queue<Integer> q;
+	Producer(Queue<Integer> q){
+		this.q = q;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		produce();
+	}
+	
+	private void produce(){
+		while(true){
+			if (q.isEmpty() || q.size() < 100) {
+				q.add(q.size() + 1);
+				System.out.println("Producer Added " + q.size() + "rd element");
+				try {
+					Thread.sleep(300);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else{
+				System.out.println("Queue is full");
+				try {
+					Thread.sleep(900);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+		}
+	}
+
+}

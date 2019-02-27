@@ -1,0 +1,28 @@
+package array;
+
+public class BlockSwap {
+	
+	static boolean isRotated = false;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] b = {1,2,3,4,5,6,7, 8};
+
+
+		
+		
+	}
+	
+	public static void swap(int [] s , int sourceStartIndex, int destStartIndex, int count){
+		int temp;
+		for(int i=0; i<count; i++){
+			temp = s[destStartIndex];
+			s[destStartIndex] = s[sourceStartIndex];
+			s[sourceStartIndex] = temp;
+			sourceStartIndex++;
+			destStartIndex++;
+		}
+		
+		
+	}
+
+}

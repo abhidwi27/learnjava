@@ -1,0 +1,45 @@
+package collection;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Queue;
+
+public class MyQueue<T> {
+	
+	private int size;
+	private Node<T> head;
+	private Node<T> tail;
+	
+	
+	public boolean add(T t){
+		if(size == 0){
+			Node<T, Node<T>> node = new Node<T, Node<T>>();
+			head.data = t;
+			head.nextNode = null;
+			tail = head;
+		}else{
+			Node<T> newNode = tail.nextNode;
+			newNode.data = t;
+			newNode.nextNode = null;
+			tail = newNode;
+		}
+		return false;
+	}
+
+	public T poll(){
+		T result = (T) head.data;
+		head = head.nextNode;		
+		return result;
+	}
+	
+	private static class Node<E>{
+		private E data;
+		private Node<E> nextNode;
+		
+		Node(E data, Node<E> nextNode){
+			this.data = data;
+			this.nextNode = nextNode;
+		}
+		
+	}
+}

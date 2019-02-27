@@ -1,0 +1,45 @@
+package array;
+
+public class BinarySearchArray {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int d = 2;
+		
+		int[] b = {1,2,3,4,5,6,7, 8};
+		
+		System.out.println(search( b, 6, 0 , 7));
+		
+		
+	
+	}
+	
+	private static int search(int[] a, int d, int startIndex, int endIndex){
+		
+		int index = -1;
+		if(a[startIndex] == d) {
+			index = startIndex;
+			return index;
+		}
+		if(a[endIndex] == d){
+			index = endIndex;
+			return index;
+		}
+		
+		int mid = startIndex + (endIndex-startIndex)/2;
+		
+		if(a[mid] == d){
+			index = mid;
+			return index;
+		}
+		
+		if( d > a[mid]){
+			index  = search(a, d, mid+1, endIndex);
+		}else if ( d < a[mid]){
+			index = search(a , d, startIndex , mid-1);
+		}
+		
+		return index;
+	}
+	
+}

@@ -1,0 +1,35 @@
+package array;
+
+public class ArraySunPair {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int sum =29;
+		int[] b = {10, 12, 15, 17, 1, 2};
+		
+		
+		int pivot = ArrayPrint.findPivot(b, 0, b.length);
+		
+		
+		
+		int calculatedSum = b[pivot+1] + b[pivot];
+		int min = pivot+1;
+		int max = pivot;
+		while( max >= 0 && min <=b.length - 1){
+			if(calculatedSum == sum){
+				System.out.println("There exists a pair");
+			}
+			if( calculatedSum > sum){
+				max--;
+				calculatedSum = b[min] + b[max];
+			}else if(calculatedSum < sum){
+				min++;
+				calculatedSum = b[min] + b[max];
+			}
+				
+			
+		}
+	}
+
+}

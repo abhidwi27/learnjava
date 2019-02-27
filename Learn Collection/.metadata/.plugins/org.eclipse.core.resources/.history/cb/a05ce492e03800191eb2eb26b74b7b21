@@ -1,0 +1,50 @@
+package array;
+
+public class ReaaragneOddEven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int a[] = {1, 2, 3, 4, 5, 6, 7};
+		int j, temp, minElement, minElementIdx, maxElement, maxElementIdx;
+		
+		minElement = a[0];
+		minElementIdx = 0;
+		maxElement = a[0];
+		maxElementIdx = 0;
+		for( int i = 1; i< a.length; i++){
+			j = i;
+			while( j >= 0 ){
+			
+				if(j%2 == 0){			
+						if( a[j] < a[maxElementIdx] && j > maxElementIdx){
+							
+							temp = a[maxElementIdx];
+							a[maxElementIdx] = a[j];
+							maxElementIdx = j;
+							
+							
+							if( a[j] < a[minElementIdx]){
+								minElement = a[j];
+								minElementIdx = maxElementIdx;
+							}
+							
+							
+							
+						}
+					
+				}else{
+					
+					
+					
+				
+				}
+				
+				j--;
+			}
+		}
+		ArrayPrint.printArray(a);
+
+	}
+
+}

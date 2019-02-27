@@ -1,0 +1,9 @@
+package collection;
+
+public class MyQueueException extends Exception{
+	
+	public MyQueueException(String message) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

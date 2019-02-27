@@ -1,0 +1,5 @@
+
+public class Domain {
+private String firstName;
+private String lastName;
+}

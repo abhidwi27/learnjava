@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class MyClass {
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyClass o3 = new MyClass();
+		o3.run();
+		
+	}
+	
+	private void run(){
+		ArrayList<MyClass> myList = new ArrayList<MyClass>();
+		MyClass o1 = new MyClass();
+		myList.add(o1);
+		System.out.println("Object reference hashcode first o1 " +o1.hashCode());
+		//o1 = new MyClass();
+		o1 = null;
+		//myList.add(o1);
+		//System.out.println("Object reference hashcode first o1 " +o1.hashCode());
+		
+		for(MyClass m: myList){
+			System.out.println("Object reference List hashcode " +m.hashCode());
+		}
+	}
+
+}

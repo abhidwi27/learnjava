@@ -1,0 +1,37 @@
+package array;
+
+public class BlockSwap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] b = {1,2,3,4,5,6,7, 8};
+		blockswap(b, 2 , b.length);
+		for(int i=0; i< b.length; i++){
+			System.out.print(b[i]);
+			if(i< b.length-1){
+				System.out.print(", ");
+			}
+			
+		}
+		
+	}
+	
+	public static void blockswap(int [] s , int d, int n){
+		int [] a = new int[d-1];
+		int [] b = new int[n-d];
+		int temp;
+		System.arraycopy(s, 0, a, 0, d-2);
+		System.arraycopy(s, d-1, b , 0, n-d-1);
+		if( d < n){
+			
+			for(int i=0 ; i<d; i++){				
+				temp = s[i];
+				a[i] = s[n-d + i];
+				s[n-d + i] = temp;
+			}
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package io;
+
+public class Demo 
+{ 
+    public static void main(String[] args) 
+    { 
+        Integer i = new Integer(12); 
+        System.out.println(i); 
+        modify(i); 
+        System.out.println(i); 
+    } 
+  
+    private static void modify(Integer i) 
+    { 
+        i = i + 1; 
+        System.out.println("This is i value in modify " + i);
+    } 
+}

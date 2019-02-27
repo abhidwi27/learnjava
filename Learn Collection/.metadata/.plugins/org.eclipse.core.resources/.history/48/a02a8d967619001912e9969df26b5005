@@ -1,0 +1,15 @@
+package collection;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class LearnStack {
+	
+	static Deque<Employee> dq = new ArrayDeque<>();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		dq.addFirst(e1);
+	}
+
+}

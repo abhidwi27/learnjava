@@ -1,0 +1,28 @@
+package collection;
+
+import java.time.LocalDate;
+import java.util.Vector;
+
+public class LearnVector {
+	
+	private static Vector<Employee> empList = new Vector<Employee> ();
+	
+	static Employee e1 = new Employee(2, "Suresh", LocalDate.parse("2006-12-08"));
+	static Employee e2 = new Employee(5, "Geeta", LocalDate.parse("2008-12-08"));
+	static Employee e3 = new Employee(8, "Seeta", LocalDate.parse("2005-10-08"));
+	static Employee e4 = new Employee(9, "Priya", LocalDate.parse("2003-01-08"));
+	
+	
+	public static void main(String[] args) {
+		
+		empList.add(e1);
+		empList.addElement(e2);
+		empList.add(e3);
+		empList.add(e4);
+		//System.out.println(empList.capacity());
+		System.out.println(empList.indexOf(e4));
+		empList.removeElementAt(2);
+		empList.indexOf(e4);
+	}
+
+}

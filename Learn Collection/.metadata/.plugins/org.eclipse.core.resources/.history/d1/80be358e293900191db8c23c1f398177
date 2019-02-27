@@ -1,0 +1,35 @@
+package array;
+
+import javax.xml.stream.events.Characters;
+
+public class BiggestNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String[] a = {"1","34", "3", "98", "9", "76", "45", "4"};
+		
+		for(int i=1; i<a.length ; i++){
+			String temp;
+			int j = i;
+			while(j>=1){
+				if(Character.getNumericValue((a[j].charAt(0))) > Character.getNumericValue(a[j-1].charAt(0))){
+					temp = a[i-1];
+					a[i-1] = a[i];
+					a[i] = temp;
+				}else if(Character.getNumericValue((a[j].charAt(0))) == Character.getNumericValue(a[j-1].charAt(0))){
+					if(Integer.parseInt((a[j] + a[j-1])) > Integer.parseInt((a[j-1] + a[j]))){
+						temp = a[i-1];
+						a[i-1] = a[i];
+						a[i] = temp;
+					}
+				}
+				j--;
+			}
+		}
+		for(int i=0; i<a.length; i++){
+			System.out.print(a[i]);
+		}
+	}
+
+}

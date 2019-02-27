@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;maven_project_log4j.log4jex&apos; to &apos;com.abhi&apos;&#x0D;&#x0A;- Original project: &apos;log4jex&apos;&#x0D;&#x0A;- Original element: &apos;log4jex/src/main/java/maven_project_log4j.log4jex&apos;&#x0D;&#x0A;- Renamed element: &apos;log4jex/src/main/java/com.abhi&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;maven_project_log4j.log4jex&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;maven_project_log4j.log4jex" name="com.abhi" qualified="false" references="true" stamp="1547020041848" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,28 @@
+package array;
+
+public class ShareSell {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int price[] = {10, 22, 5, 75, 65, 80};
+		
+		int buyPrice = Integer.MAX_VALUE;
+		int sellPrice = Integer.MIN_VALUE;
+		boolean isBuying = true;
+		
+		for(int i=0; i< price.length ; i++){
+			
+			if(isBuying){
+				if(price[i] < buyPrice){
+					buyPrice = price[i];
+				}
+			}else{
+				if(price[i] > sellPrice){
+					sellPrice = a[i];
+				}
+			}
+		}
+		
+	}
+
+}

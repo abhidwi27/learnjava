@@ -1,0 +1,13 @@
+package collection;
+
+import java.util.Vector;
+
+public class LearnVector {
+	
+	private static Vector<Employee> empList = new Vector<Employee> ();
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+package multithreading;
+
+public class LearnIncAndDec {
+	
+	static int  i = 0;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		Thread t1 = new Thread( new Runnable(){
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while( i <= 50)
+				System.out.println("Incermented by " + Thread.currentThread().getName() + "value " + i++);
+			}
+		}, "first");
+		
+		Thread t2 = new Thread(new Runnable(){
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				while( i > 0)
+				System.out.println("Incermented by " + Thread.currentThread().getName() + "value " + i--);
+			}
+			
+		}, "second" );
+		
+		t1.start();
+		t2.start();
+
+	}
+
+}

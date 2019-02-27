@@ -1,0 +1,71 @@
+package array;
+
+public class BinarySearchWithRotatedArray {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int d = 27;
+		
+		int[] b = {30 ,40, 18, 20 , 21, 27, 28, 29};
+		
+		System.out.println(search( b, d, 0 , b.length-1));
+		
+		
+	
+	}
+	
+	private static int search(int[] a, int d, int startIndex, int endIndex){
+		int index = -1;
+		if(a[startIndex] == d) {
+			index = startIndex;
+			return index;
+		}
+		if(a[endIndex] == d){
+			index = endIndex;
+			return index;
+		}
+		
+		if( endIndex > startIndex){
+			int mid = startIndex + (endIndex-startIndex)/2;
+			
+			if(a[mid] == d){
+				index = mid;
+				return index;
+			}
+			
+			if(a[mid] > a[startIndex]){
+				if(d > a[startIndex] && d < a[mid] ){
+					index = search(a, d, startIndex , mid-1);
+					return index;
+				}
+			}
+			
+			if(a[endIndex] > a[mid]){
+				if(d > a[mid] && d < a[endIndex] ){
+					index = search(a, d, mid+1 , endIndex);
+					return index;
+				}
+			}
+			if(a[mid] < a[startIndex]){
+				int mid1 = startIndex + (mid-startIndex)/2;
+				if(a[mid1]==d){
+					index = mid1;
+					return index;
+				}else{
+				index  = search(a, d, startIndex, mid1-1 );
+				index  = search(a, d, mid1+1, mid);
+				}
+				
+			}else if( a[mid] > a[endIndex]){
+				int mid2 = mid + (endIndex-mid)/2;
+				if(a[mid2] == d){
+					index = mid2;
+					return index;
+				}
+				index = search(a, d, mid, mid2-1);
+				index = search(a, d, mid2+1, endIndex);
+			}
+		}
+		return index;
+	}
+}

@@ -1,0 +1,19 @@
+package multithreading;
+
+public class Consumer implements Runnable{
+	
+	Consumer(){
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void consume(){
+		
+	}
+
+}

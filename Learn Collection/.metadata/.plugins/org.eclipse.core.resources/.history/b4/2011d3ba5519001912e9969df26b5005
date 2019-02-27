@@ -1,0 +1,10 @@
+package collection;
+
+public class LearnVector {
+	
+	private static Vector<Employee> empList = new Vector<Employee> ();
+	public static void main(String[] args) {
+		
+	}
+
+}

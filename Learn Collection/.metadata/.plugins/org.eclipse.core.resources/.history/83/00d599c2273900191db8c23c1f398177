@@ -1,0 +1,11 @@
+package array;
+
+public class BiggestNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String[] a = {"1","34", "3", "98", "9", "76", "45"', "4"};
+	}
+
+}

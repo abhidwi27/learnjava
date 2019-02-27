@@ -1,0 +1,19 @@
+package multithreading;
+
+public class MyThread extends Thread{
+	
+	MyThread(ThreadGroup group, String name){
+		super(group, name);
+	}
+	public void run(){
+		m();
+		
+		
+	}
+	private void m(){
+		System.out.println("Printed by " + Thread.currentThread().getName());
+		System.out.println("Thread Group name " +  this.getThreadGroup().getName());
+		System.out.println("Thread Priority " +  this.getPriority() );
+		System.out.println("Thread Id " +  this.getId() );
+	}
+}

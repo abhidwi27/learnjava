@@ -1,0 +1,24 @@
+package array;
+
+public class ArrayReAggrangement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] a = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8,
+	              11, 10, 9, 5, 13, 16, 2, 14, 17, 4};
+		
+		for(int i=0; i< a.length ; i++){
+			for(int j=0; j< a.length; j++){
+				if(a[i] != i && !(a[i] == -1)){
+					int temp = a[a[i]];
+					a[a[i]] = a[i];
+					a[i] = temp;
+				}
+			}
+		}
+		
+		ArrayPrint.printArray(a);
+	}
+
+}

@@ -1,0 +1,24 @@
+package multithreading;
+
+public class Consumer implements Runnable{
+	
+	Consumer(){
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void consume(){
+		while(true){
+			if (q.isEmpty() || q.size() < 100) {
+				q.add(q.size() + 1);
+			}
+			System.out.println("Producer Added " + q.size() );
+		}
+	}
+
+}

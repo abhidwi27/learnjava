@@ -1,0 +1,27 @@
+package multithreading;
+
+import java.util.Queue;
+
+public class Consumer implements Runnable{
+	
+	private Queue<Integer> q;
+	Consumer(Queue q){
+		this.q = q;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void consume(){
+		while(true){
+			if ( q.size() > 0) {
+				q.poll();
+			}
+			System.out.println("Producer Added " + q.size() );
+		}
+	}
+
+}

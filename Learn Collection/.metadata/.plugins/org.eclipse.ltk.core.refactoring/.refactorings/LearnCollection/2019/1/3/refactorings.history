@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;collection.LearnCollections&apos; to &apos;LearnDeQeue&apos;&#x0D;&#x0A;- Original project: &apos;LearnCollection&apos;&#x0D;&#x0A;- Original element: &apos;collection.LearnCollections&apos;&#x0D;&#x0A;- Renamed element: &apos;collection.LearnDeQeue&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LearnCollections&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;collection{LearnCollections.java[LearnCollections" matchStrategy="1" name="LearnDeQeue" qualified="false" references="true" similarDeclarations="false" stamp="1547474493241" textual="false" version="1.0"/>
+</session>

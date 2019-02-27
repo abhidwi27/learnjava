@@ -1,0 +1,13 @@
+package array;
+
+public class ArraySunPair {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		int[] b = {10, 12, 15, 17, 1, 2};
+		
+	}
+
+}

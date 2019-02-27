@@ -1,0 +1,80 @@
+package array;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class KthSmallestElement {
+
+	public static void main(String[] args) {
+		
+		int[] a = {7, 10, 4, 3, 20, 15, 8};
+		int n = a.length;		
+		int k = 3;
+		int start1, end1, start2, end2;
+		
+		
+		//Comparator<Integer> MyComp = new MyComparator(); 
+		int endIdx;
+		for( int startIdx=0; startIdx < a.length;){
+			if( startIdx + k > n){
+				endIdx  = n-1;
+			}else{
+				endIdx = startIdx + k;
+			}
+			Arrays.sort(a, startIdx, endIdx);
+			
+			startIdx = startIdx + k;
+		}
+		
+		
+		
+		
+
+	}
+	
+	/*private static class MyComparator implements Comparator<Integer>{
+
+		@Override
+		public int compare(Integer arg0, Integer arg1) {
+			// TODO Auto-generated method stub
+			return arg1- arg0;
+		}
+		
+	}*/
+	
+	public static void mergeArrays(int[] arr1, int start1, int end1, int[] arr2, int start2, int end2) {
+		
+		int arr1FillIdx = start1;
+		int arr2FillIdx = start2;
+		int arr2NavigateIdx = start2;
+		int tempNavigateIdx = 0;
+		int[] temp = new int[end1-start1];
+		for(int i=start1; i< end1; i++){
+			temp[i] = arr1[i];
+		}
+		
+		while( tempNavigateIdx < end1 && arr2NavigateIdx < end2){
+			if(temp[tempNavigateIdx] > arr2[arr2NavigateIdx]){
+				if(arr1FillIdx < end1){
+					arr1[arr1FillIdx] = arr2[arr2NavigateIdx];
+					arr1FillIdx++;
+				}else{
+					arr2[arr2FillIdx] = arr2[arr2NavigateIdx];
+					arr2FillIdx++;
+				}
+				arr2NavigateIdx++;
+			}else{
+				if(arr1FillIdx < end1){
+					arr1[arr1FillIdx]  = temp[tempNavigateIdx];
+					arr1FillIdx++;
+				}else{
+					arr2[arr2FillIdx]  = temp[tempNavigateIdx];
+					arr2FillIdx++;
+				}
+				tempNavigateIdx ++;
+				
+			}
+		}
+		
+	}
+}

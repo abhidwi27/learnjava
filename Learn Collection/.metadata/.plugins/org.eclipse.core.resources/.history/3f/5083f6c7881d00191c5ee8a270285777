@@ -1,0 +1,23 @@
+package multithreading;
+
+public class LearnIncAndDec {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int i = 0;
+		
+		Thread t1 = new Thread( new Runnable(){
+			
+			@run(){
+				
+			}
+		}, "my");
+		
+		Thread t2 = new Thread(){
+			
+		};
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package array;
+
+public class LargestContinuousSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = { 7, 10, 4, -3, 20, 15, -1, 2, 1, -4, 22, 11, 45, 98, 34, 9, 6 };
+		
+		int oldFromIdx,oldToIdx, oldMaxSum, currentFromIdx, currentToIdx, currentMaxSum, currentSum;
+		
+		oldFromIdx = oldToIdx =  oldMaxSum =  currentFromIdx = currentToIdx =  currentMaxSum = currentSum = 0;
+		for(int i=0; i< a.length; i++){
+			if( a[i] > 0 && oldMaxSum == 0 && currentMaxSum == 0 ){
+				oldFromIdx = i;
+				oldToIdx = i;
+				currentFromIdx = i;
+				currentToIdx = i;
+				currentMaxSum = a[i];			
+				
+			}else {
+				
+				currentSum = currentSum + a[i];
+				if( currentSum < 0){
+				
+				currentSum = 0;
+				oldFromIdx  = currentFromIdx;
+				oldToIdx = currentToIdx;
+				oldMaxSum = currentMaxSum;
+				currentFromIdx = i;
+				currentToIdx = i;
+				currentMaxSum = 0;
+				
+				
+			}
+				
+			}
+		}
+	}
+
+}

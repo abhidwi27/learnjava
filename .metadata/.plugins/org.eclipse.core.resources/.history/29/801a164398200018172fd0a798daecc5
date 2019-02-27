@@ -1,0 +1,13 @@
+package io;
+
+public class PrintBytes {
+	
+	public static void main(String args[]){
+		byte b[] = {'H', 'E'};
+		int i=0;
+		for ( i ; i<= b.length ; i++){
+		System.out.println(b[i]);
+		}
+	}
+
+}

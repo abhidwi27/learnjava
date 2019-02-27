@@ -1,0 +1,12 @@
+package multithreading;
+
+public class MyThread extends Thread{
+	
+	public void run(){
+		//m();
+		
+	}
+	private void m(){
+		System.out.println("Printed by " + Thread.currentThread().getName());
+	}
+}

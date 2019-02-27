@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="App (2)" project="junitexample" tests="7" started="7" failures="0" errors="0" ignored="4">
+  <testsuite name="com.junitex.App" time="0.016">
+    <testcase name="testSum" classname="com.junitex.App" time="0.016" ignored="true"/>
+    <testcase name="testEqual" classname="com.junitex.App" time="0.0" ignored="true"/>
+    <testcase name="testEual" classname="com.junitex.App" time="0.0"/>
+    <testcase name="testBoolean" classname="com.junitex.App" time="0.0"/>
+    <testcase name="testSubstraction" classname="com.junitex.App" time="0.0" ignored="true"/>
+    <testcase name="testDivisionException" classname="com.junitex.App" time="0.0" ignored="true"/>
+    <testcase name="testDivison" classname="com.junitex.App" time="0.0"/>
+  </testsuite>
+</testrun>

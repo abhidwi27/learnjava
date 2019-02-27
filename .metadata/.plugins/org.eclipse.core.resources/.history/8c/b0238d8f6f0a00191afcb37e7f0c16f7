@@ -1,0 +1,19 @@
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class NumberFormatEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		String num = "";
+		
+		NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
+		
+		String format = currency.format(new BigDecimal(num));
+		
+		System.out.println("Formatted String is " + format);
+	}
+
+}

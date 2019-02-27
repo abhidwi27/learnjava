@@ -1,0 +1,58 @@
+package collection;
+
+import java.time.LocalDate;
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class LearnStack {
+	
+	/*static Deque<Employee> dq = new ArrayDeque<>();
+	static Employee e1 = new Employee(2, "Suresh", LocalDate.parse("2006-12-08"));
+	static Employee e2 = new Employee(5, "Geeta", LocalDate.parse("2008-12-08"));
+	static Employee e3 = new Employee(8, "Seeta", LocalDate.parse("2005-10-08"));
+	static Employee e4 = new Employee(9, "Priya", LocalDate.parse("2003-01-08"));
+	static int head = 0 ;
+	static int length = 16;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		dq.add(e1);
+		dq.add(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e1);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e1);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		dq.addFirst(e2);
+		System.out.println(dq.pop());
+	//	System.out.println(dq.getFirst());
+		//System.out.println( (head-1)  & ( length - 1) );
+	//	System.out.println(Integer.toBinaryString(-1));
+	//	System.out.println(Integer.toBinaryString(15));
+	}*/
+	System.out.println( "Array Deque Examples!" );
+
+    Deque<String> stack = new ArrayDeque<String>();
+    stack.push("first");
+    stack.push("second");
+    System.out.println("stack pollFirst = "+stack.pollFirst());
+    System.out.println("stact pollLast = "+stack.pollLast());
+    System.out.println("stack peek = "+stack.peek());
+
+    Deque<String> queue = new ArrayDeque<String>();
+    queue.offer("one");
+    queue.offer("two");
+
+    System.out.println("queue pollFirst = "+queue.pollFirst());
+    System.out.println("queue pollLast = "+queue.pollLast());
+    System.out.println("queue peek = "+queue.peek());
+}
