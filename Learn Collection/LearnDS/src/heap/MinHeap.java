@@ -1,6 +1,6 @@
 package heap;
 
-import array.ArrayPrint;
+import array.ArrayUtil;
 
 public class MinHeap {
 	
@@ -13,7 +13,7 @@ public class MinHeap {
 			heapify(a, i, n);
 		}
 		
-		ArrayPrint.printArray(a);
+		ArrayUtil.printArray(a);
 	}
 	
 	

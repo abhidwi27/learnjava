@@ -8,7 +8,7 @@ public class ArrayLeftRotateReverse {
 		int d = 2;
 		//leftrotate(b , d, b.length);
 		rightrotate(b , d, b.length);
-		ArrayPrint.printArray(b);
+		ArrayUtil.printArray(b);
 	}
 	
 	
@@ -16,9 +16,9 @@ public class ArrayLeftRotateReverse {
 		if(d > n){
 			d = d%n;
 		}
-		ArrayPrint.reverse(a, 0, d-1);
-		ArrayPrint.reverse(a, d, n-1);
-		ArrayPrint.reverse(a, 0, n-1);
+		ArrayUtil.reverse(a, 0, d-1);
+		ArrayUtil.reverse(a, d, n-1);
+		ArrayUtil.reverse(a, 0, n-1);
 	}
 	
 	private static void rightrotate(int[] a, int d, int n){
@@ -26,8 +26,8 @@ public class ArrayLeftRotateReverse {
 			d = d%n;
 		}
 		
-		ArrayPrint.reverse(a, 0, (n-1)-(d));
-		ArrayPrint.reverse(a, n-d, n-1);
-		ArrayPrint.reverse(a, 0, n-1);
+		ArrayUtil.reverse(a, 0, (n-1)-(d));
+		ArrayUtil.reverse(a, n-d, n-1);
+		ArrayUtil.reverse(a, 0, n-1);
 	}
 }

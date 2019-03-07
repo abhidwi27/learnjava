@@ -9,7 +9,7 @@ public class ArraySunPair {
 		int[] b = {10, 12, 15, 17, 1, 2};
 		
 		
-		int pivot = ArrayPrint.findPivot(b, 0, b.length);
+		int pivot = ArrayUtil.findPivot(b, 0, b.length);
 		
 		
 		

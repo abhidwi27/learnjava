@@ -1,6 +1,6 @@
 package sortalgo;
 
-import array.ArrayPrint;
+import array.ArrayUtil;
 
 public class SelectionSort {
 
@@ -9,7 +9,7 @@ public class SelectionSort {
 		
 		int a[] = {10, 11, 9 , 8, 89, 41, 12, -2};
 		selectionsort(a);
-		ArrayPrint.printArray(a);
+		ArrayUtil.printArray(a);
 	}
 	
 	private static void selectionsort(int[] a) {

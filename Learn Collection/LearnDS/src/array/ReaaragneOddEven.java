@@ -43,7 +43,7 @@ public class ReaaragneOddEven {
 				j--;
 			}
 		}
-		ArrayPrint.printArray(a);
+		ArrayUtil.printArray(a);
 
 	}
 

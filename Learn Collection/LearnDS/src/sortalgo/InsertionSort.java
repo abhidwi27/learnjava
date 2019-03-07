@@ -1,6 +1,6 @@
 package sortalgo;
 
-import array.ArrayPrint;
+import array.ArrayUtil;
 
 public class InsertionSort {
 
@@ -10,7 +10,7 @@ public class InsertionSort {
 		for(int i=0; i < a.length ; i++) {
 			sortSubArray(a, i, 0);
 		}
-		ArrayPrint.printArray(a);
+		ArrayUtil.printArray(a);
 	}
 	
 	private static void sortSubArray(int [] a, int start, int end){

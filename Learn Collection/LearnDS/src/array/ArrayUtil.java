@@ -1,6 +1,6 @@
 package array;
 
-public class ArrayPrint {
+public class ArrayUtil {
 	
 	public static void printArray(int[] a){
 		for(int i=0; i< a.length; i++){
@@ -43,6 +43,26 @@ public class ArrayPrint {
 			}
 		}else{
 			return -1;
+		}
+	}
+	
+	public static void maxheapify(int[] a, int i, int length) {
+		int left = 2*i + 1;
+		int right = 2*i + 2;
+		int largest = i;
+		
+		if( left < length && a[left] > a[largest]) {
+			largest = left;
+		}
+		if( right < length && a[right] > a[largest]) {
+			largest = right;
+		}
+		
+		if( largest != i ) {
+			int temp = a[largest];
+			a[largest] = a[i];
+			a[i] = temp;
+			maxheapify(a, largest, length);
 		}
 	}
 

@@ -46,7 +46,7 @@ public class ArrayReAggrangement {
 			
 		} 
 		System.out.println("Count is " + count);
-		ArrayPrint.printArray(arr);
+		ArrayUtil.printArray(arr);
 	}
 
 }

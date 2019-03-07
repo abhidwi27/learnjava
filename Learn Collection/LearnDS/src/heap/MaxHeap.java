@@ -1,19 +1,20 @@
 package heap;
 
-import array.ArrayPrint;
+import array.ArrayUtil;
 
 public class MaxHeap {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
-				int a[] = {10, 11, 9 , 8, 89, 41, 12, -2};
+				//int a[] = {10, 11, 9 , 8, 89, 41, 12, -2};
+				int a[] = {-2, 11, 41, 8, 10, 9, 12};
 				int n = a.length;
 				for(int i= n/2 - 1; i>=0; i--) {
 					heapify(a, i, n);
 				}
 				
-				ArrayPrint.printArray(a);
+				ArrayUtil.printArray(a);
 	}
 	
 	private static void heapify(int[] a, int i, int length) {

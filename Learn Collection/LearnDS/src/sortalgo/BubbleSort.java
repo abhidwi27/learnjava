@@ -1,6 +1,6 @@
 package sortalgo;
 
-import array.ArrayPrint;
+import array.ArrayUtil;
 
 public class BubbleSort {
 	static boolean swapped = false;
@@ -18,7 +18,7 @@ public class BubbleSort {
 			}
 		}
 		System.out.println("Count is " + count);
-		ArrayPrint.printArray(a);
+		ArrayUtil.printArray(a);
 	}
 	
 	private static void swapAdjacent(int[] a, int start, int end) {
